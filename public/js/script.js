@@ -10,5 +10,6 @@ $(document).ready(function() {
 
     $('#marissafy').click(function(){
         $('#submit').click();
+        $('#box-wrap').addClass('show');
     });
 });

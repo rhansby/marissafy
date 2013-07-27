@@ -21,6 +21,7 @@ $(document).ready(function() {
         if(!$('#canvas').hasClass('shadow')) {
             $('#canvas').addClass('shadow');
         }
+        $('.show').removeClass('show');
     });
 
     $('#upload-file').bind('change', function() {
