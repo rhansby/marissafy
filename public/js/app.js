@@ -24,8 +24,6 @@ var save_to_imgur = function() {
         },
         dataType: 'json',
         success: function(response) {
-            console.log(response.data.link);
-            // TODO: Write response.data.link to box
             document.getElementById('share').innerHTML = response.data.link;
         }
     });
@@ -61,5 +59,16 @@ $(document).ready(function() {
 
     $('#share').on('click', function() {
         save_to_imgur();
+        $('#share').off('click');
+    });
+
+    $('.btn').on('click', function() {
+        if ($(this)[0].id !== 'share') {
+            console.log('not share')
+            $('#share').on('click', function() {
+                save_to_imgur();
+                $('#share').off('click');
+            });
+        }
     });
 });
