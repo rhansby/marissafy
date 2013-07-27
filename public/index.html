@@ -8,6 +8,17 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=570451876325035";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <header> 
         <h1>marissafy</h1>
     </header>
@@ -23,6 +34,10 @@
 
     <div id="window" class="block">
         <canvas id="canvas"></canvas>
+
+        <span class="btn" id="share">Share Link</span>
+
+        <div class="fb-like" data-href="http://marissafy.herokuapp.com" data-send="true" data-layout="box_count" data-width="450" data-show-faces="true" data-font="arial"></div>
     </div>
 
     <div id="box-wrap" class="block">
