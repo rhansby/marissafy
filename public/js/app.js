@@ -26,6 +26,7 @@ var save_to_imgur = function() {
         success: function(response) {
             console.log(response.data.link);
             // TODO: Write response.data.link to box
+            document.getElementById('share').innerHTML = response.data.link;
         }
     });
 }
@@ -56,5 +57,9 @@ $(document).ready(function() {
             context.drawImage(this, 0, 0, canvas.width, canvas.height);
         };
         image.src = image_location;
+    });
+
+    $('#share').on('click', function() {
+        save_to_imgur();
     });
 });
