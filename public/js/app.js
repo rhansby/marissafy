@@ -74,7 +74,8 @@ $(document).ready(function() {
 
     $('.btn').on('click', function() {
         if ($(this)[0].id !== 'share') {
-            console.log('not share')
+            $('#share').removeClass('link');
+            document.getElementById('share').innerHTML = 'Share Link';
             $('#share').on('click', function() {
                 save_to_imgur();
                 $('#share').off('click');
