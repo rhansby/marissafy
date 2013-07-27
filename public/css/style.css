@@ -214,12 +214,17 @@ canvas.shadow {
     left: 0;
     right: 0;
     bottom: 0;
+    display: none;
+}
+
+.show {
+    display: block !important;
 }
 
 .border {
     width: 3px;
     height: 25px;
-    background: black;
+    background: white;
     position: absolute;
     display: block;
 }
@@ -233,6 +238,110 @@ canvas.shadow {
     right: 2px;
     top: 5px;
 }
+
+.show .right {
+
+    -webkit-animation:  right 1000ms infinite;
+    
+}
+.show .left {
+    -webkit-animation:  left 1000ms infinite;
+}
+
+.show .bottom {
+    -webkit-animation:  bottom 1000ms infinite;
+}
+
+.show .top {
+    -webkit-animation: top 1000ms infinite;
+}
+
+@-webkit-keyframes  left {
+    0% {
+        opacity: 0.1;
+    }
+    25% {
+        opacity: .25;.
+    }
+    50% {
+        opacity: .50
+    }
+    75% {
+        opacity: .75
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@-webkit-keyframes  left {
+    0% {
+        opacity: 0.1;
+    }
+    25% {
+        opacity: .25.;
+    }
+    50% {
+        opacity: .50;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@-webkit-keyframes  top {
+    0% {
+        opacity: .25;
+    }
+    25% {
+        opacity: .50.;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity:  1.0;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+@-webkit-keyframes bottom {
+    0% {
+        opacity: .50;
+    }
+    25% {
+        opacity: .75;.
+    }
+    50% {
+        opacity: 1.0; 
+    }
+    75% {
+        opacity: 0.1; 
+    }
+    100% {
+        opacity: .25;
+    }
+}
+@-webkit-keyframes  right {
+    0% {
+        opacity: .75;
+    }
+    25% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: .50;
+    }
+}
+
 
 .top {
     left: 3px;

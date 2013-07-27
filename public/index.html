@@ -3,14 +3,26 @@
 <head>
     <title>MARISSAFY</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
-<link href="css/reset.min.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="css/reset.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=570451876325035";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <header> 
         <h1>marissafy</h1>
     </header>
+    
     <div id="container">
         <form action="/upload" enctype="multipart/form-data" method="post" id="upload-form">
             <input type="file" name="upload" multiple="multiple" id="upload-file">
@@ -19,8 +31,13 @@
          <span class="btn" id="upload">Upload File</span>
          <span class="btn" id="marissafy">Marissafy</span>
     </div>
+
     <div id="window" class="block">
         <canvas id="canvas"></canvas>
+
+        <span class="btn" id="share">Share Link</span>
+
+        <div class="fb-like" data-href="http://marissafy.herokuapp.com" data-send="true" data-layout="box_count" data-width="450" data-show-faces="true" data-font="arial"></div>
     </div>
 
     <!--
@@ -36,6 +53,8 @@
 
     <script type="text/javascript" src="js/lib/jquery.js"></script>
     <script type="text/javascript" src="js/lib/jquery-form.js"></script>
+    <script type="text/javascript" src="js/lib/base64.js"></script>
+    <script type="text/javascript" src="js/lib/canvas2image.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
