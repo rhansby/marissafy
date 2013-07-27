@@ -6,7 +6,7 @@ var marissafy = function(coords) {
     almighty_marissa_face.onload = function() {
         context.drawImage(almighty_marissa_face, coords.x, coords.y, coords.width, coords.height);
     };
-    almighty_marissa_face.src = 'img/marissa_1.png';
+    almighty_marissa_face.src = 'img/marissa_2.png';
 }
 
 $(document).ready(function() {
