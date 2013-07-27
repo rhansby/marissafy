@@ -38,6 +38,11 @@ $(document).ready(function() {
                 marissafy(coords_array[i]);
             }
         }
+
+        if(!$('#canvas').hasClass('shadow')) {
+            $('#canvas').addClass('shadow');
+        }
+        $('.show').removeClass('show');
     });
 
     $('#upload-file').bind('change', function() {
