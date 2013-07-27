@@ -204,8 +204,8 @@ canvas.shadow {
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 #box-wrap {
@@ -217,8 +217,8 @@ canvas.shadow {
 }
 
 .border {
-    width: 5px;
-    height: 50px;
+    width: 3px;
+    height: 25px;
     background: black;
     position: absolute;
     display: block;
@@ -226,23 +226,26 @@ canvas.shadow {
 
 .left {
     left: 0;
+    top: 5px;
 }
 
 .right {
-    right: 0;
+    right: 2px;
+    top: 5px;
 }
 
 .top {
-    left: 0;
+    left: 3px;
     -webkit-transform: rotate(-90deg); 
     -webkit-transform-origin: 0 0%;
-    top: 50px;
+    top: 30px;
 }
 
 .bottom {
     -webkit-transform: rotate(-90deg); 
     -webkit-transform-origin: 0 0%;
-    bottom: 0;
+    left: 3px;
+    bottom: -4px;
 }
 
 
