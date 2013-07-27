@@ -4,7 +4,7 @@ var context = canvas.getContext('2d');
 var marissafy = function(coords) {
     var almighty_marissa_face = new Image();
     almighty_marissa_face.onload = function() {
-        context.drawImage(almighty_marissa_face, coords.x * 2, coords.y * 2, coords.width * 2.5, coords.height * 2.5);
+        context.drawImage(almighty_marissa_face, coords.x, coords.y, coords.width, coords.height);
     };
     almighty_marissa_face.src = 'img/marissa_1.png';
 }
@@ -25,8 +25,8 @@ $(document).ready(function() {
 
         var image = new Image();
         image.onload = function() {
-            canvas.width = this.width;
-            canvas.height = this.height;
+            canvas.width = this.width / 2;
+            canvas.height = this.height / 2;
             context.drawImage(this, 0, 0, canvas.width, canvas.height);
         };
         image.src = image_location;
