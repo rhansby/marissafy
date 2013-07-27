@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Marissafy</title>
-
+    <title>MARISSAFY</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href="css/reset.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <form action="/upload" enctype="multipart/form-data" method="post" id="upload-form">
-        <input type="text" name="title">
-        <br>
-        <input type="file" name="upload" multiple="multiple" id="upload-file">
-        <br>
-        <input type="submit" value="Upload">
-
-        <br>
-        <br>
-
+    <header> 
+        <h1>marissafy</h1>
+    </header>
+    <div id="container">
+        <form action="/upload" enctype="multipart/form-data" method="post" id="upload-form">
+            <input type="file" name="upload" multiple="multiple" id="upload-file">
+            <input type="submit" id="submit" value="Upload">
+        </form>
+         <span class="btn" id="upload">Upload File</span>
+         <span class="btn" id="marissafy">Marissafy</span>
+    </div>
+    <div id="window" class="block">
         <canvas id="canvas"></canvas>
+    </div>
 
-        <script type="text/javascript" src="js/lib/jquery.js"></script>
-        <script type="text/javascript" src="js/lib/jquery-form.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-    </form>
+    <div id="box-wrap" class="block">
+        <div id="box">
+            <div class="top border"></div>
+            <div class="left border"></div>
+            <div class="bottom border "></div>
+            <div class="right border"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-form.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
