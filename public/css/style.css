@@ -195,6 +195,7 @@ canvas.shadow {
     margin:  auto;
     top: 0;
     left: 0;
+    position: absolute;
 /*
     display: inline-block;
     vertical-align: middle;
