@@ -10,7 +10,7 @@ app.use(express.logger());
 
 app.use(express.bodyParser());
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || 8888;
 app.listen(port, function() {
@@ -18,10 +18,6 @@ app.listen(port, function() {
 });
 
 app.get('/', function(request, response) {
-  if (request.query.auth && request.query.auth_type)
-    response.sendfile((__dirname + '/public/authed.html'));
-  else 
-    response.sendfile((__dirname + '/public/index.html'));
 });
 
 app.get('/auth_facebook', function(request, response) {
