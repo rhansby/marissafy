@@ -23,7 +23,7 @@ app.post('/upload', function(request, response) {
     var base64img = fs.readFileSync(request.files.upload.path).toString('base64');
 
     var data = querystring.stringify({
-        img: base64img
+        base64: base64img
     });
 
     var options = {
@@ -38,16 +38,24 @@ app.post('/upload', function(request, response) {
     };
 
     var req = http.request(options, function(res) {
-        res.setEncoding('binary'); // 'or utf-8'
+        res.setEncoding('utf-8');
         res.on('data', function (chunk) {
-            fs.writeFileSync('testing.png', chunk, 'binary');
+            var obj = JSON.parse(chunk)
+
+            // for-in to get a single key... barf.
+            for (filename in obj) {
+                console.log(obj[filename])
+
+                if ( obj.hasOwnProperty(filename) ) {
+                    response.write(JSON.stringify(obj[filename]));
+                }
+            }
+            response.end();
         });
     });
 
     req.write(data);
     req.end();
-
-    response.end();
 });
 
 app.get('/show', function(request, response) {
