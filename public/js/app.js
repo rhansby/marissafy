@@ -5,11 +5,11 @@ var upload_image;
 var marissafy = function(coords) {
 
     var almighty_marissa_face = new Image(),
-        marissa_faces = ['img/marissa_1.png', 'img/marissa_3.png', 'img/marissa_4.png','img/marissa_5.png', 'img/marissa_6.png'],
-        random_face = Math.floor(Math.random()*6);
+        marissa_faces = ['img/marissa_1.png', 'img/marissa_2.png','img/marissa_3.png', 'img/marissa_4.png','img/marissa_5.png'],
+        random_face = Math.floor(Math.random()*5);
 
     almighty_marissa_face.onload = function() {
-        context.drawImage(almighty_marissa_face, coords.x, (coords.y * .9), (coords.width * 1.25), (almighty_marissa_face.height*1.25));
+        context.drawImage(almighty_marissa_face, coords.x, (coords.y * .85), (coords.width * 1.3), (coords.width *1.3 *1.716));
     };
 
     console.log(random_face);
