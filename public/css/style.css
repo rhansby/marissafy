@@ -193,6 +193,8 @@ canvas.shadow {
     max-width: 100%;
     max-height: 100%;
     margin:  auto;
+    top: 0;
+    left: 0;
 /*
     display: inline-block;
     vertical-align: middle;
@@ -206,6 +208,9 @@ canvas.shadow {
     position: relative;
     width: 30px;
     height: 30px;
+    position: absolute;
+    top: 360px;
+    left: 630px;
 }
 
 #box-wrap {
@@ -215,6 +220,7 @@ canvas.shadow {
     right: 0;
     bottom: 0;
     display: none;
+    z-index: 1000;
 }
 
 .show {
@@ -371,4 +377,31 @@ canvas.shadow {
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em; /* adjusts for spacing of content*/
+}
+
+footer {
+    width: 960px;
+    margin: auto;
+}
+
+footer hr {
+    border: 0;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+}
+
+footer .btn {
+    font: 11px arial, sans-serif;
+    float: right;
+}
+footer .fb-like {
+}
+
+#share.link {
+    text-transform: none;
+    opacity: 0.7;
+    cursor: default;
+}
+
+#share.link:hover {
+    opacity: 1;
 }

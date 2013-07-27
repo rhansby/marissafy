@@ -34,6 +34,7 @@ var save_to_imgur = function() {
             console.log(response.data.link);
             // TODO: Write response.data.link to box
             document.getElementById('share').innerHTML = response.data.link;
+            $('#share').addClass('link');
         }
     });
 }
