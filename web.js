@@ -11,7 +11,7 @@ app.use(express.bodyParser());
 
 app.use(express.static(__dirname + '/public'));
 
-var port = 8888 || process.env.PORT;
+var port = process.env.PORT || 8888;
 app.listen(port, function() {
     console.log('Listening on ' + port);
 });
